@@ -1933,7 +1933,6 @@ void main_loop_wait(int timeout)
 
     os_host_main_loop_wait(&timeout);
 
-
     tv.tv_sec = timeout / 1000;
     tv.tv_usec = (timeout % 1000) * 1000;
 

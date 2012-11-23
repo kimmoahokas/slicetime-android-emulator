@@ -46,6 +46,9 @@
 #include "acl.h"
 #include "exec-all.h"
 
+#include "slicetime/synchronization.h"
+#include "slicetime/synchronization-qemu.h"
+
 //#define DEBUG
 //#define DEBUG_COMPLETION
 
@@ -1659,6 +1662,23 @@ static void do_acl(Monitor *mon,
         monitor_printf(mon, "acl: unknown command '%s'\n", command);
     }
 }
+
+static void do_init_sync(Monitor *mon, const char *server_address,
+			 const char *server_port, const char *client_port,
+			 int client_id)
+{
+    // stop vm, connect to slicetime and start waiting for run command
+    vm_stop(EXCP_INTERRUPT);
+    slicetime_init_client(server_address, server_port, client_port,
+				       client_id);
+}
+
+static void do_stop_sync(Monitor *mon)
+{
+    slicetime_stop_sync();
+    do_cont(mon);
+}
+
 
 static const mon_cmd_t mon_cmds[] = {
 #include "qemu-monitor.h"

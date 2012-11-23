@@ -625,6 +625,25 @@ STEXI
 Inject an MCE on the given CPU (x86 only).
 ETEXI
 
+    { "init_sync", "sssi", do_init_sync,
+      "server_address server_port client_port client_id",
+      "init SliceTime sync using server at host:port. Client listens to connections in client_port. client_id must be unique client id. Also stops vm execution." },
+STEXI
+@item init sync @var{server_address} @var{server_port} @var{client_port] @var{client_id}
+Connect to SliceTime server at @var{server_address}:@var{server_port}.
+Client listens connections in @var{client_port}.
+These variables must match those set in servers configuration.
+@var{client_id) must be unique client id.
+Also stops vm execution.
+ETEXI
+
+    { "stop_sync", "", do_stop_sync,
+      "", "stop SliceTime syncing."},
+STEXI
+@item stop_sync
+Stop SliceTime syncing.
+ETEXI
+
 STEXI
 @end table
 ETEXI

@@ -570,6 +570,13 @@ common_LOCAL_SRC_FILES += \
     qlist.c \
     qstring.c \
 
+# Source files for SliceTime integration
+SLICETIME_SOURCES = \
+    synchronization-qemu.c \
+    synchronizer.c
+
+common_LOCAL_SRC_FILES += $(SLICETIME_SOURCES:%=slicetime/%)
+
 ifeq ($(QEMU_TARGET_XML_SOURCES),)
     QEMU_TARGET_XML_SOURCES := arm-core arm-neon arm-vfp arm-vfp3
     QEMU_TARGET_XML_SOURCES := $(QEMU_TARGET_XML_SOURCES:%=$(LOCAL_PATH)/gdb-xml/%.xml)
