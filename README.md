@@ -6,15 +6,16 @@ This is a fork of original android emulator designed to use with SliceTime. For 
 ## Modifications to android emulator ##
 
 Two commands were added to android emulator console:
-`init_sync <host> <server_port> <client_port> <client_id>`
+
+* `init_sync <host> <server_port> <client_port> <client_id>`
 which pauses emulator, connects to slicetime synchronizer and starts listening for incoming run permissions. set client id and client port to different values on every emulator instance, otherwise they won't work on same machine.
 
-`stop_sync`
+* `stop_sync`
 disconnects from synchronizer and resumes normal operation.
 
 ## Instructions ##
 
-For user instructions you should see documentation in [SliceTime GitHub](https://github.com/mr-kimia/slicetime)
+For user instructions you should see documentation in [SliceTime GitHub](https://github.com/mr-kimia/slicetime).
 
 ## Legal ##
 
