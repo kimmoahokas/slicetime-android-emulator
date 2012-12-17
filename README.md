@@ -1,13 +1,24 @@
 # SliceTime for Android Emulator #
 
-This is a fork of original android emulator designed to use with SliceTime. For more info see [Android open source project](http://source.android.com/) and [Project SliceTime](http://www.comsys.rwth-aachen.de/research/projects/slicetime/)
+This is a fork of original android emulator designed to use with SliceTime. For more info see [Android open source project](http://source.android.com/) and [Project SliceTime](http://www.comsys.rwth-aachen.de/research/projects/slicetime/).
 
-Most of the Android system is Licensed under [Apache Software License, 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-Android emulator is based on QEMU which is a trademark of [Fabrice Bellard](http://bellard.org/). For licensing see [QEMU license](http://wiki.qemu.org/License)
+## Modifications to android emulator ##
 
+Two commands were added to android emulator console:
+`init_sync <host> <server_port> <client_port> <client_id>`
+which pauses emulator, connects to slicetime synchronizer and starts listening for incoming run permissions. set client id and client port to different values on every emulator instance, otherwise they won't work on same machine.
+
+`stop_sync`
+disconnects from synchronizer and resumes normal operation.
+
+## Instructions ##
+
+For user instructions you should see documentation in [SliceTime GitHub](https://github.com/mr-kimia/slicetime)
+
+## Legal ##
+
+Most of the Android system is Licensed under [Apache Software License, 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+Android emulator is based on QEMU which is a trademark of [Fabrice Bellard](http://bellard.org/). For licensing info see [QEMU license](http://wiki.qemu.org/License).
 Original licenses apply to this fork.
 
-Read the documentation in qemu-doc.html.
-
-Fabrice Bellard.
