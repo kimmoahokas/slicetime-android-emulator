@@ -1,7 +1,10 @@
 # SliceTime for Android Emulator #
 
-This is a fork of original android emulator designed to use with SliceTime. For more info see [Android open source project](http://source.android.com/) and [Project SliceTime](http://www.comsys.rwth-aachen.de/research/projects/slicetime/).
+SliceTime for Android enables use of Android programs with the SliceTime network emulation platform.
 
+This is a fork of original Android emulator. Original repository can be found at [https://android.googlesource.com/platform/external/qemu](https://android.googlesource.com/platform/external/qemu).
+
+For more info see [Android open source project](http://source.android.com/) and [Project SliceTime](http://www.comsys.rwth-aachen.de/research/projects/slicetime/).
 
 ## Modifications to android emulator ##
 
