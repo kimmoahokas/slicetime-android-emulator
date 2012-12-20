@@ -6,6 +6,10 @@ This is a fork of original Android emulator. Original repository can be found at
 
 For more info see [Android open source project](http://source.android.com/) and [Project SliceTime](http://www.comsys.rwth-aachen.de/research/projects/slicetime/).
 
+## Related repositories ##
+* [SliceTime](https://github.com/mr-kimia/slicetime)
+* [SliceTime QEMU](https://github.com/mr-kimia/slicetime-qemu)
+
 ## Modifications to android emulator ##
 
 Two commands were added to android emulator console:
